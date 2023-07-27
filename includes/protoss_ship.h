@@ -4,7 +4,7 @@
 
 class ProtossShip : public Ship {
 public:
-    ProtossShip(const std::string &name, int healthPoints, int damage, int shield);
+    ProtossShip(std::string name, int damage, int healthPoints, int shield);
 
     virtual void regenerateShield(int shieldToRegenerate, int maxPossibleShield);
 

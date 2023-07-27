@@ -2,8 +2,8 @@
 
 
 
-Phoenix::Phoenix(const std::string &name, int healthPoints, int damage, int shield) : ProtossShip(name, healthPoints,
-                                                                                                  damage, shield) {}
+Phoenix::Phoenix(const std::string &name, int damage, int healthPoints, int shield) : ProtossShip(name, damage,
+                                                                                                  healthPoints, shield) {}
 
 void Phoenix::dealDamage(std::unique_ptr<Ship> &defendingShip) {
     defendingShip->takeDamage(m_damage);

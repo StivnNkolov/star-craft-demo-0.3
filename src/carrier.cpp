@@ -1,8 +1,8 @@
 #include "../includes/carrier.h"
 
-Carrier::Carrier(const std::string &name, int healthPoints, int damage, int shield, int numberOfInterceptors)
-        : ProtossShip(name, healthPoints,
-                      damage, shield), m_interceptorsCount(numberOfInterceptors) {}
+Carrier::Carrier(const std::string &name, int damage, int healthPoints, int shield, int numberOfInterceptors)
+        : ProtossShip(name, damage,
+                      healthPoints, shield), m_interceptorsCount(numberOfInterceptors) {}
 
 void Carrier::dealDamage(std::unique_ptr<Ship> &defendingShip) {
     if (isHealthFull()) {

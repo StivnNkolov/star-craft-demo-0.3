@@ -7,6 +7,7 @@
 Race::Race(std::string name) : m_name(std::move(name)) {}
 
 void Race::generateFleet(const std::string &fleetComposition) {
+//    m_fleet.reserve(fleetComposition.size());
     for (auto const shipFlag:fleetComposition) {
         m_shipsBuilderMapper[shipFlag]();
     }

@@ -7,7 +7,7 @@
 
 class BattleCruiser : public Ship {
 public:
-    explicit BattleCruiser(const std::string &name = BattleCruiserConstants::BATTLE_CRUISER_NAME, int healthPoints = BattleCruiserConstants::BATTLE_CRUISER_HEALTH, int damage = BattleCruiserConstants::BATTLE_CRUISER_DAMAGE);
+    explicit BattleCruiser(const std::string &name = BattleCruiserConstants::BATTLE_CRUISER_NAME, int damage = BattleCruiserConstants::BATTLE_CRUISER_DAMAGE, int healthPoints = BattleCruiserConstants::BATTLE_CRUISER_HEALTH);
 
     void dealDamage(std::unique_ptr<Ship> &defendingShip) override;
 

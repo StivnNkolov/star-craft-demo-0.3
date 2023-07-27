@@ -1,9 +1,11 @@
+#include <utility>
+
 #include "../includes/protoss_ship.h"
 #include "../includes/constants.h"
 
 
-ProtossShip::ProtossShip(const std::string &name, int healthPoints, int damage, int shield) : Ship(name, healthPoints,
-                                                                                                   damage),
+ProtossShip::ProtossShip(std::string name, int damage, int healthPoints, int shield) : Ship(std::move(name), damage,
+                                                                                            healthPoints),
                                                                                               m_shield(shield) {}
 
 void ProtossShip::regenerateShield(int shieldToRegenerate, int maxPossibleShield) {

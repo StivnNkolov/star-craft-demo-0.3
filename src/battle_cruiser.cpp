@@ -1,7 +1,7 @@
 #include "../includes/battle_cruiser.h"
 
-BattleCruiser::BattleCruiser(const std::string &name, int healthPoints, int damage) : Ship(name, healthPoints,
-                                                                                           damage) {}
+BattleCruiser::BattleCruiser(const std::string &name, int damage, int healthPoints) : Ship(name, damage,
+                                                                                           healthPoints) {}
 
 void BattleCruiser::dealDamage(std::unique_ptr<Ship> &defendingShip) {
     m_numberOfAttacks++;

@@ -1,6 +1,6 @@
 #include "../includes/viking.h"
 
-Viking::Viking(const std::string &name, int healthPoints, int damage) : Ship(name, healthPoints, damage) {}
+Viking::Viking(const std::string &name, int damage, int healthPoints) : Ship(name, damage, healthPoints) {}
 
 void Viking::dealDamage(std::unique_ptr<Ship> &defendingShip) {
     int damageToDeal = m_damage;

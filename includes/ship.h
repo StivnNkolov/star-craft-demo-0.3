@@ -6,7 +6,7 @@
 
 class Ship {
 public:
-    Ship(std::string name, int healthPoints, int damage);
+    Ship(std::string name, int damage, int healthPoints);
 
     virtual ~Ship() = default;
 

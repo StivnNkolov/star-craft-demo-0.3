@@ -8,7 +8,10 @@
 
 class Carrier : public ProtossShip {
 public:
-    explicit Carrier(const std::string &name = CarrierConstants::CARRIER_NAME, int healthPoints = CarrierConstants::CARRIER_HEALTH, int damage = CarrierConstants::CARRIER_DAMAGE, int shield = CarrierConstants::CARRIER_SHIELD, int numberOfInterceptors = CarrierConstants::CARRIER_MAX_INTERCEPTORS);
+    explicit Carrier(const std::string &name = CarrierConstants::CARRIER_NAME,
+                     int damage = CarrierConstants::CARRIER_DAMAGE, int healthPoints = CarrierConstants::CARRIER_HEALTH,
+                     int shield = CarrierConstants::CARRIER_SHIELD,
+                     int numberOfInterceptors = CarrierConstants::CARRIER_MAX_INTERCEPTORS);
 
     void dealDamage(std::unique_ptr<Ship> &defendingShip) override;
 

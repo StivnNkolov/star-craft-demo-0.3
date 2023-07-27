@@ -1,4 +1,5 @@
 #include <utility>
+#include <iostream>
 
 #include "../includes/race.h"
 #include "../includes/constants.h"
@@ -6,8 +7,8 @@
 Race::Race(std::string name) : m_name(std::move(name)) {}
 
 void Race::generateFleet(const std::string &fleetComposition) {
-    for (auto const el:fleetComposition) {
-        m_shipsBuilderMapper[el]();
+    for (auto const shipFlag:fleetComposition) {
+        m_shipsBuilderMapper[shipFlag]();
     }
 }
 

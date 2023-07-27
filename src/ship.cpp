@@ -1,5 +1,3 @@
-#include <utility>
-
 #include "../includes/ship.h"
 #include "../includes/constants.h"
 

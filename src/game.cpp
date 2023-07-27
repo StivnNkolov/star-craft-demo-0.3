@@ -1,4 +1,7 @@
+#include <iostream>
 #include "../includes/game.h"
+#include "../includes/protoss.h"
+#include "../includes/terran.h"
 
 Game::Game() {
     m_races.emplace_back(new Terran);
@@ -38,22 +41,22 @@ void Game::printWinMessage(std::unique_ptr<Race> &winningRace) {
 
 int Game::startBattle() {
     while (true) {
-        for (size_t i = 0; i < m_races.size(); i++) {
-            auto &attackingRace = m_races[i];
-            for (size_t j = 0; j < m_races.size(); j++) {
+        for (size_t attackingRaceId = 0; attackingRaceId < m_races.size(); attackingRaceId++) {
+            auto &attackingRace = m_races[attackingRaceId];
+            for (size_t defendingRaceId = 0; defendingRaceId < m_races.size(); defendingRaceId++) {
 
-                if (j == i) {
+                if (defendingRaceId == attackingRaceId) {
                     continue;
                 }
 
-                auto &defendingFleet = m_races[j]->m_fleet;
+                auto &defendingFleet = m_races[defendingRaceId]->m_fleet;
                 attackingRace->attackEnemy(defendingFleet);
 
                 if (defendingFleet.empty()) {
                     printWinMessage(attackingRace);
                     return 0;
                 }
-                printLastAttackedShipStats(*m_races[j], defendingFleet.size() - 1);
+                printLastAttackedShipStats(*m_races[defendingRaceId], defendingFleet.size() - 1);
             }
         }
     }

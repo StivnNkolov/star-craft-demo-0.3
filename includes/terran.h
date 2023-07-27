@@ -1,11 +1,7 @@
 #ifndef DEMO_TERRAN_H
 #define DEMO_TERRAN_H
 
-#include <vector>
-#include <functional>
-#include <map>
 #include "race.h"
-#include "battle_cruiser.h"
 #include "constants.h"
 
 class Terran : public Race {

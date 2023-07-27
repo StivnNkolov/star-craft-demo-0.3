@@ -2,9 +2,10 @@
 #define DEMO_GAME_H
 
 #include <memory>
-#include <vector>
-#include "protoss.h"
-#include "terran.h"
+//#include <vector>
+//#include "protoss.h"
+//#include "terran.h"
+#include "race.h"
 
 
 class Game {

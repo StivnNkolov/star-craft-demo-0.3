@@ -1,8 +1,8 @@
 #ifndef STAR_CRAFT_DEMO_0_3_SHIP_H
 #define STAR_CRAFT_DEMO_0_3_SHIP_H
 
-#include <iostream>
 #include <memory>
+#include <string>
 
 class Ship {
 public:

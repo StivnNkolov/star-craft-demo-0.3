@@ -1,8 +1,6 @@
 #ifndef STAR_CRAFT_DEMO_0_3_RACE_H
 #define STAR_CRAFT_DEMO_0_3_RACE_H
 
-#include <iostream>
-#include <memory>
 #include <functional>
 #include <vector>
 #include <map>
